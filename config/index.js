@@ -24,9 +24,17 @@ module.exports = (app) => {
   // controls a very specific header to pass headers from the frontend
   app.use(
     cors({
-      origin: [FRONTEND_URL],
+      origin:"http://localhost:5173" // this is the FRONTEND// multiple: []
     })
   );
+
+
+  // app.use(
+//   cors({
+//     origin: FRONTEND_URL // it means gets the .env links (3000)
+//   })
+// );
+
 
   // In development environment the app logs
   app.use(logger("dev"));
